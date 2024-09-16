@@ -1,0 +1,9 @@
+<h3>Pedidos Ingresados</h3>
+<p>[
+  @for(item of lstPedido; track $index){
+    {{item | json}} ,
+  }
+]</p>
+<app-delivary></app-delivary>
+<app-pos></app-pos>
+<app-kitchen></app-kitchen>

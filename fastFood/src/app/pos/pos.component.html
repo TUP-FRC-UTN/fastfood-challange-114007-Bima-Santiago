@@ -1,0 +1,8 @@
+<h2>Point of Sell</h2>
+<form #form="ngForm" (ngSubmit)="sendForm(form)">
+  <label for="nombre">Nombre:</label>
+  <input type="text" #nombre="ngModel" name="nombre" id="nombre" [(ngModel)]="pedido.nombre" required />
+  <label for="pedido">Pedido:</label>
+  <input type="text" name="contenido" #contenido="ngModel" [(ngModel)]="pedido.contenido" required />
+  <button type="submit">Ordenar</button>
+</form>

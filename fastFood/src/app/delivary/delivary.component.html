@@ -1,0 +1,6 @@
+<h3>Pedidos listos para entregar</h3>
+<ul>
+  @for (item of lstTerminados; track $index) {
+    <li>({{item.numero}}) - {{item.nombre}} <button (click)="entregar($index)">Entregar!</button></li>
+  }
+</ul>

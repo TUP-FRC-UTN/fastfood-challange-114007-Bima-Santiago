@@ -1,0 +1,14 @@
+<h2>Cocina</h2>
+<h3>Pendiente de cocinar</h3>
+<ul>
+  @for (item of lstPedido; track $index) {
+    <li>({{item.numero}}) - {{item.contenido}} <button type="button" [disabled]="cocinando" (click)="cocinar($index)">Cocinar</button></li>
+  }
+</ul>
+<h3>Pedidos en cocción</h3>
+@if(cocinando){
+  <ul>
+    <li>({{coccion.numero}}) {{coccion.nombre}}- {{coccion.contenido}}</li>
+  </ul>
+  <button (click)="entregar()">Producto Terminado!</button>
+}
